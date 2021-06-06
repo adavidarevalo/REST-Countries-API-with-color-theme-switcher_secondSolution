@@ -1,0 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.displayFlex{
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+  width:80%;
+  margin:0 auto;
+}
+.header{
+  background:rebeccapurple;
+  padding-block:20px;
+  .Header-main {
+    background:red;
+    @extend .displayFlex;
+  }
+  .Header-search{
+    background:yellow;
+    @extend .displayFlex;
+    div{
+      background:red;
+      padding:0px 15px;
+      input{
+        padding:10px 5px;
+      }
+    }
+  }
+}
