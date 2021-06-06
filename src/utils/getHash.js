@@ -5,4 +5,4 @@ const getHash = () =>{
   console.log(test)
   return test
 }
-export default getHash();
+export default getHash;

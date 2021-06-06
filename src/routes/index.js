@@ -3,9 +3,9 @@ import Search from "../templates/Search"
 import Character from "../pages/Character"
 import Home from "../pages/Home"
 import Error404 from "../pages/Error404"
-import getHash from '../utils/getHash';
 import resolveRoutes from '../utils/resolveRoutes';
 import getData from "../utils/getData"
+import getHash from '../utils/getHash';
 
 const routes = {
   "/": Home,
@@ -22,15 +22,13 @@ const router = async()=>{
   prePrintHeader.push(headerSearch)
   header.innerHTML= prePrintHeader;
   //Home
-  let get = await getHash;
+  let get = await getHash();
   console.log("This is getHash", get)
   const content = null ||document.getElementById('content');
-  if(getHash === "/"){
-  content.innerHTML = await Home();
-  console.log("este:", getHash)
+  if(get === "/"){
+    content.innerHTML = await Home();
   } else {
-    debugger
-    console.log("este2:", getHash)
+    console.log("este2:", get)
     content.innerHTML = await Character();
   }
 
