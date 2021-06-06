@@ -7,6 +7,11 @@ import getHash from '../utils/getHash';
 import resolveRoutes from '../utils/resolveRoutes';
 import getData from "../utils/getData"
 
+const routes = {
+  "/": Home,
+  "/:name": Character,
+}
+
 const router = async()=>{
   //Header Part
   const header = null || document.getElementById('header');
@@ -17,17 +22,21 @@ const router = async()=>{
   prePrintHeader.push(headerSearch)
   header.innerHTML= prePrintHeader;
   //Home
-  if(getHash() == "/"){
-    const content = null ||document.getElementById('content');
+  let get = await getHash;
+  console.log("This is getHash", get)
+  const content = null ||document.getElementById('content');
+  if(getHash === "/"){
   content.innerHTML = await Home();
+  console.log("este:", getHash)
   } else {
-    alert("Habrir el pais")
+    debugger
+    console.log("este2:", getHash)
+    content.innerHTML = await Character();
   }
-}
-
-const routerByName = async()=>{
 
 }
+
+
 
 
 export default router;

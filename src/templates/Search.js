@@ -4,6 +4,7 @@ const Search = () =>{
     <div>
       <i class="fas fa-search"></i>
       <input type="text" placeholder="Search for a country...">
+      <button id="search">Search</button>
     </div>
       <select name="" id="mainRegion">
         <option value="Undefine">Filter by Region</option>
