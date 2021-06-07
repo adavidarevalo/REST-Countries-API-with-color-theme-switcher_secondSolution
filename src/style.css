@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-.displayFlex, .header .Header-search, .header .Header-main {
+.displayFlex, .Header-search {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,24 +13,155 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 
+.boxShadow, .Header-search div button, .header .Header-main {
+  -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.font, .Header-search .selecRegion select, .Header-search div button, body {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: #fafafa;
+}
+
 .header {
-  background: rebeccapurple;
-  padding-block: 20px;
+  background: #fff;
+  padding-top: 20px;
 }
 .header .Header-main {
-  background: red;
+  width: 100%;
+  padding-block: 15px 35px;
 }
-.header .Header-search {
-  background: yellow;
+.header .Header-main div {
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.header .Header-search div {
-  background: red;
-  padding: 0px 15px;
+.header .Header-main div h1 {
+  font-size: 1.2rem;
 }
-.header .Header-search div input {
-  padding: 10px 5px;
+.header .Header-main div button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+}
+.header .Header-main div button span {
+  margin-right: 5px;
+}
+
+.Header-search {
+  width: 90%;
+  margin: 0 auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.Header-search div {
+  max-width: 600px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.Header-search div div {
+  height: 40px;
+  max-width: 400px;
+  -webkit-box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 5px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.Header-search div div i {
+  margin-right: 5px;
+}
+.Header-search div div input {
+  width: 100%;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  padding: 5px 15px;
+  outline: none;
+  color: #000;
+}
+.Header-search div button {
+  border-radius: 5px;
+  border: none;
+  background: white;
+  font-size: 1rem;
+  padding: 6px 15px;
+}
+.Header-search .selecRegion {
+  margin-top: 20px;
+  border-radius: 10px;
+}
+.Header-search .selecRegion select {
+  padding: 5px 10px;
+  font-size: 1rem;
+  outline: none;
+}
+
+main .Characters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+main .Characters article {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 5px;
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  margin: 50px 10px;
+  padding-bottom: 20px;
+}
+main .Characters article a {
+  text-decoration: none;
+  color: #000;
+}
+main .Characters article a img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+main .Characters article a h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  padding-left: 5%;
+}
+main .Characters article a h2 span {
+  margin-left: 5px;
+}
+main .Characters article a h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  padding-left: 5%;
+}
+main .Characters article a h3 span {
+  margin-left: 5px;
 }

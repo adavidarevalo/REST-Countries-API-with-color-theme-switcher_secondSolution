@@ -6,25 +6,100 @@
   display:flex;
   justify-content:space-between;
   align-items: center;
-  width:80%;
+  width:100%;
   margin:0 auto;
 }
+.boxShadow{
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+$clr-white:#fff;
+$clr-gray:#fafafa;
+$clr-black:#000;
+.font{
+  font-family: 'Roboto',
+  sans-serif;
+}
+body{
+  @extend .font;
+  background:$clr-gray;
+}
 .header{
-  background:rebeccapurple;
-  padding-block:20px;
+  background: $clr-white;
+  padding-top:20px;
   .Header-main {
-    background:red;
-    @extend .displayFlex;
-  }
-  .Header-search{
-    background:yellow;
-    @extend .displayFlex;
+    @extend .boxShadow;
+    width: 100%;
+    padding-block: 15px 35px;
     div{
-      background:red;
-      padding:0px 15px;
-      input{
-        padding:10px 5px;
+      width: 90%;
+      margin:0 auto;
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      h1 {
+        font-size: 1.2rem;
       }
+      button {
+        span {
+          margin-right: 5px;
+        }
+        background:none;
+        border:none;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+//Imput Search
+.Header-search {
+  width:90%;
+  margin:0 auto;
+  @extend .displayFlex;
+  flex-wrap: wrap;
+  div {
+    max-width: 600px;
+    width: 100%;
+    display:flex;
+    justify-content: space-around;
+    div{
+      height: 40px;
+      max-width: 400px;
+      box-shadow: 2px 2px 10px 1px rgb(0 0 0 / 20%);
+      border-radius: 5px;
+      padding: 5px 10px;
+      display:flex;
+      align-items: center;
+      i {
+        margin-right: 5px;
+      }
+      input {
+        width: 100%;
+        background: none;
+        border: none;
+        font-size: 1rem;
+        padding: 5px 15px;
+        outline: none;
+        color: #000
+      }
+    }
+    button {
+      border-radius: 5px;
+      border: none;
+      background: white;
+      @extend .boxShadow;
+      @extend .font;
+      font-size: 1rem;
+      padding: 6px 15px;
+    }
+  }
+  .selecRegion{
+    margin-top: 20px;
+    border-radius: 10px;
+    select{
+      padding:5px 10px;
+      font-size: 1rem;
+      @extend .font;
+      outline: none;
     }
   }
 }

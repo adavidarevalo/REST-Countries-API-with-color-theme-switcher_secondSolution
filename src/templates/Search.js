@@ -2,10 +2,13 @@ const Search = () =>{
   const view = `
   <div class="Header-search">
     <div>
-      <i class="fas fa-search"></i>
-      <input type="text" placeholder="Search for a country...">
-      <button id="search">Search</button>
+      <div>
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Search for a country...">
+      </div>
+      <button id="searchCountry">Search</button>
     </div>
+    <div class="selecRegion">
       <select name="" id="mainRegion">
         <option value="Undefine">Filter by Region</option>
         <option value="Asia">Asia</option>
@@ -14,6 +17,7 @@ const Search = () =>{
         <option value="Africa">Africa</option>
         <option value="Oceania">Oceania</option>
       </select>
+    </div>
   </div>
   `
   return view

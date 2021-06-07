@@ -5,8 +5,13 @@ const APIName = "https://restcountries.eu/rest/v2/name/"
 import getHash from './getHash';
 
 
-const getData = async (id) => {
-  const apiURl = id ? `${APIName}${id}` : API;
+const getData = async (name) => {
+  let apiURl;
+  if(name=== undefined){
+    apiURl = API
+  } else {
+    apiURl = `${APIName}${name}`
+  }
   try {
     const response = await fetch(apiURl);
     const data = await response.json();
