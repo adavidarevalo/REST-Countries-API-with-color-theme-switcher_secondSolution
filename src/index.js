@@ -2,4 +2,14 @@ import router from './routes';
 
 window.addEventListener('load', router);
 window.addEventListener('hashchange', router);
-const header = document.querySelector(".header")
+
+const searchACountry = document.querySelector("#searchForACountry")
+const mainButtonSearch = document.querySelector("#mainButtonSearch")
+
+mainButtonSearch.addEventListener("click", ()=>{
+  if(searchACountry.value == ""){
+    alert("No vale")
+  } else{
+    router();
+  }
+})

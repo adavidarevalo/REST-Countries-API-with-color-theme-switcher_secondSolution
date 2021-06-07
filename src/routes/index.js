@@ -1,29 +1,38 @@
-import Header from "../templates/Header"
-import Search from "../templates/Search"
 import Character from "../pages/Character"
 import Home from "../pages/Home"
 import Error404 from "../pages/Error404"
 import getData from "../utils/getData"
 import getHash from '../utils/getHash';
+const searchACountry = document.querySelector("#searchForACountry")
 
 const routes = {
   "/": Home,
   "/:name": Character,
 }
 
-const router = async()=>{
-  //Header Part
-  const header = null || document.getElementById('header');
-  header.innerHTML= Header();
+const router = async(infoName)=>{
   //Home
   let get = await getHash();
   const content = null ||document.getElementById('content');
-  if(get === "/"){
-    content.innerHTML = await Home();
-  } else {
-    content.innerHTML = await Character(get);
+  let result=[];
+  console.log(infoName)
+  if(searchACountry.value == ""){
+    if(get === "/"){
+    result.push(await Home())
+    content.innerHTML = await result;
+  } else{
+    result.push(await Character(get))
+    content.innerHTML = result;
   }
-
+  } else{
+    try{
+      result.push(await Character(searchACountry.value))
+    content.innerHTML = result;
+    } catch (error){
+      content.innerHTML = Error404();
+    }
+  }
+  searchACountry.value = ""
 }
 
 

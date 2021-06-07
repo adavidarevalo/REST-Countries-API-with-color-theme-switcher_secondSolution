@@ -1,105 +1,99 @@
-*{
+$sinze8: 0.875rem;
+$clr-white: #fff;
+$box: 3px 2px 5px grey;
+$clr-gray: #444;
+$box2: 2px 2px 10px 1px rgba(0, 0, 0, 0.2);
+$clr-black: #000;
+$clr-bone: #fafafa;
+$clr-darkHeader: #2B3743;
+$clr-darkBody: #202D36;
+
+.font {
+  font-family: 'Roboto', sans-serif;
+}
+
+* {
   margin: 0;
   padding: 0;
-}
-.displayFlex{
-  display:flex;
-  justify-content:space-between;
-  align-items: center;
-  width:100%;
-  margin:0 auto;
-}
-.boxShadow{
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-}
-$clr-white:#fff;
-$clr-gray:#fafafa;
-$clr-black:#000;
-.font{
-  font-family: 'Roboto',
-  sans-serif;
-}
-body{
   @extend .font;
-  background:$clr-gray;
 }
-.header{
-  background: $clr-white;
-  padding-top:20px;
-  .Header-main {
-    @extend .boxShadow;
-    width: 100%;
-    padding-block: 15px 35px;
-    div{
-      width: 90%;
-      margin:0 auto;
-      display:flex;
-      justify-content: space-between;
-      align-items: center;
-      h1 {
-        font-size: 1.2rem;
-      }
-      button {
-        span {
-          margin-right: 5px;
-        }
-        background:none;
-        border:none;
-        font-size: 1rem;
-      }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5vw;
+  @extend .font;
+  box-shadow: $box2;
+
+  h1 {
+    font-size: $sinze8;
+    color: $clr-black;
+  }
+
+  section {
+    display: flex;
+    align-items: center;
+    color: $clr-black;
+    cursor: pointer;
+
+    svg {
+      filter: invert(1);
+    }
+
+    p {
+      font-size: $sinze8;
+      color: $clr-black;
     }
   }
 }
-//Imput Search
-.Header-search {
-  width:90%;
-  margin:0 auto;
-  @extend .displayFlex;
+//--------------------
+.main-find {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
   div {
-    max-width: 600px;
-    width: 100%;
-    display:flex;
-    justify-content: space-around;
-    div{
-      height: 40px;
-      max-width: 400px;
-      box-shadow: 2px 2px 10px 1px rgb(0 0 0 / 20%);
-      border-radius: 5px;
-      padding: 5px 10px;
-      display:flex;
-      align-items: center;
-      i {
-        margin-right: 5px;
-      }
-      input {
-        width: 100%;
-        background: none;
-        border: none;
-        font-size: 1rem;
-        padding: 5px 15px;
-        outline: none;
-        color: #000
-      }
+    display: flex;
+    margin: 15px;
+    padding: 0px 10px;
+    border-radius: 5px;
+    box-shadow: $box2;
+    background: $clr-white;
+    width: 80%;
+    max-width: 500px;
+
+    svg {
+      filter: invert(1);
     }
-    button {
-      border-radius: 5px;
+
+    input {
+      width: 100%;
+      background: none;
       border: none;
-      background: white;
-      @extend .boxShadow;
-      @extend .font;
-      font-size: 1rem;
-      padding: 6px 15px;
+      font-size: $sinze8;
+      outline: none;
+      color: $clr-black;
     }
   }
-  .selecRegion{
-    margin-top: 20px;
-    border-radius: 10px;
-    select{
-      padding:5px 10px;
-      font-size: 1rem;
-      @extend .font;
-      outline: none;
+
+  select {
+    cursor: pointer;
+    height: 50px;
+    margin: 5px 15px 15px 15px;
+    border-radius: 3px;
+    padding: 10px 15px;
+    box-shadow: $box2;
+    font-size: $sinze8;
+    color: $clr-black;
+    outline: none;
+    border: none;
+
+    option {
+      color: $clr-black;
     }
   }
 }

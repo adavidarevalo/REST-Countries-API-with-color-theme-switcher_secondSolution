@@ -9,7 +9,7 @@ const Character = async(name)=>{
       <article class="Characters-card">
         <img src="${content.flag}" alt="${content.name}">
       </article>
-      <article class="Characters-card">
+      <article class="Characters-info">
         <h2>Name: <span>${content.name}</span></h2>
         <h3>Population: <span>${content.population}</span></h3>
         <h3>Region: <span>${content.region}</span></h3>

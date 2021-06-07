@@ -1,5 +1,5 @@
 const API = "https://restcountries.eu/rest/v2/all"
-const APIRegion = "https://restcountries.eu/rest/v2/region/${mainRegion.value}"
+const APIRegion = "https://restcountries.eu/rest/v2/region/"
 const APIName = "https://restcountries.eu/rest/v2/name/"
 
 import getHash from './getHash';
@@ -8,8 +8,8 @@ import getHash from './getHash';
 const getData = async (name) => {
   let apiURl;
   if(name=== undefined){
-    apiURl = API
-  } else {
+    apiURl = API;
+  } else if (name !== ""){
     apiURl = `${APIName}${name}`
   }
   try {
