@@ -1,0 +1,97 @@
+.darkColor {
+  header {
+    background: $clr-darkHeader;
+
+    h1 {
+      color: $clr-white;
+    }
+
+    .darkStyle {
+      p {
+        color: $clr-white;
+      }
+    }
+  }
+
+  main {
+    .main-find {
+      div {
+        background: transparent;
+
+        div {
+          background: $clr-darkHeader;
+
+          input {
+            color: $clr-white;
+          }
+        }
+
+        button {
+          background: $clr-darkHeader;
+          color: $clr-white;
+        }
+
+        button:hover {
+          background-color: #161f25;
+        }
+
+        button:active {
+          background-color: #161f25;
+        }
+      }
+
+      select {
+        background: $clr-darkHeader;
+        color: $clr-white;
+        option {
+          color: $clr-white;
+        }
+      }
+
+      select:hover {
+        background-color: #161f25;
+      }
+
+      select:active {
+        background-color: #161f25;
+      }
+    }
+
+    background:$clr-darkBody;
+
+    section {
+      .Error404{
+        img{
+          filter: invert(1);
+        }
+        p{
+          color:$clr-white;
+        }
+      }
+      .Characters-inner{
+        .Characters-info{
+          h2, h3{
+            color: $clr-white;
+          }
+        }
+      }
+      .Characters {
+        .Character-item {
+          background: $clr-darkHeader;
+          a {
+            h2,
+            h3 {
+              color: $clr-white;
+            }
+          }
+        }
+        .Character-item:hover{
+          background:#242c35;
+        }
+        .Character-item:active{
+          background:#242c35;
+        }
+      }
+    }
+  }
+}

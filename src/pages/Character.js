@@ -7,7 +7,16 @@ const Character = async(name)=>{
   const view = `
     <div class="Characters-inner">
       <article class="Characters-card">
-        <img src="${content.flag}" alt="${content.name}">
+        <div class="Characters-open">
+          <img src="${content.flag}" alt="${content.name}" class="Characters-img">
+          <div class="Character-explain">
+              <i class="fas fa-expand-arrows-alt">
+                <div class="flagPage">
+                  <img src="${content.flag}" alt="${content.name}" class="Characters-img">
+                </div>
+              </i> 
+          </div>
+        </div>
       </article>
       <article class="Characters-info">
         <h2>Name: <span>${content.name}</span></h2>

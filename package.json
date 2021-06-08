@@ -8,7 +8,6 @@
     "dev": "webpack --mode development",
     "start": "webpack serve --mode development --open"
   },
-
   "keywords": [
     "Country",
     "Practice"

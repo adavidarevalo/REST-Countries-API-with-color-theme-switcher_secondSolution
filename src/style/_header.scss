@@ -8,6 +8,11 @@ $clr-bone: #fafafa;
 $clr-darkHeader: #2B3743;
 $clr-darkBody: #202D36;
 
+
+.colorVar{
+  $clr-white: red;
+}
+
 .font {
   font-family: 'Roboto', sans-serif;
 }
@@ -25,7 +30,6 @@ header {
   padding: 15px 5vw;
   @extend .font;
   box-shadow: $box2;
-
   h1 {
     font-size: $sinze8;
     color: $clr-black;
@@ -36,7 +40,6 @@ header {
     align-items: center;
     color: $clr-black;
     cursor: pointer;
-
     svg {
       filter: invert(1);
     }
@@ -55,28 +58,45 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-
   div {
     display: flex;
     margin: 15px;
     padding: 0px 10px;
     border-radius: 5px;
-    box-shadow: $box2;
     background: $clr-white;
     width: 80%;
     max-width: 500px;
-
-    svg {
-      filter: invert(1);
+    align-items: center;
+    div{
+      box-shadow: $box2;
+      svg {
+        filter: invert(1);
+      }
+      input {
+        width: 100%;
+        background: none;
+        border: none;
+        font-size: $sinze8;
+        outline: none;
+        color: $clr-black;
+        @extend .font;
+      }
     }
-
-    input {
-      width: 100%;
-      background: none;
+    button{
+      padding: 5px 15px;
+      height: 40px;
       border: none;
-      font-size: $sinze8;
-      outline: none;
-      color: $clr-black;
+      box-shadow: $box2;
+      font-size:1rem;
+      @extend .font;
+    }
+    button:hover{
+      background-color: #2f2f30;
+      color: $clr-white;
+    }
+    button:active{
+      background-color: #2f2f30;
+      color: $clr-white;
     }
   }
 
@@ -87,11 +107,11 @@ header {
     border-radius: 3px;
     padding: 10px 15px;
     box-shadow: $box2;
-    font-size: $sinze8;
+    font-size: 1rem;
     color: $clr-black;
     outline: none;
     border: none;
-
+    @extend .font;
     option {
       color: $clr-black;
     }

@@ -10,13 +10,17 @@ const routes = {
   "/:name": Character,
 }
 
+const reagionComprovation = ["Asia", "Americas", "Europe", "Africa", "Oceania"]
+
 const router = async(infoName)=>{
   //Home
   let get = await getHash();
   const content = null ||document.getElementById('content');
   let result=[];
-  console.log(infoName)
-  if(searchACountry.value == ""){
+  if(reagionComprovation.includes(infoName)){
+    result.push(await Home(infoName))
+    content.innerHTML = await result;
+  } else if(searchACountry.value == ""){
     if(get === "/"){
     result.push(await Home())
     content.innerHTML = await result;

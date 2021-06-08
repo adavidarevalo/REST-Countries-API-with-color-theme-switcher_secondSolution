@@ -4,11 +4,13 @@ const APIName = "https://restcountries.eu/rest/v2/name/"
 
 import getHash from './getHash';
 
-
+const reagionComprovation = ["Asia", "Americas", "Europe", "Africa", "Oceania"]
 const getData = async (name) => {
   let apiURl;
   if(name=== undefined){
     apiURl = API;
+  } else if(reagionComprovation.includes(name)){
+    apiURl = `${APIRegion}${name}`
   } else if (name !== ""){
     apiURl = `${APIName}${name}`
   }
