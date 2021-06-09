@@ -10,23 +10,26 @@ const Character = async(name)=>{
         <div class="Characters-open">
           <img src="${content.flag}" alt="${content.name}" class="Characters-img">
           <div class="Character-explain">
+            <a href="/#/${content.name}/#flagPage">
               <i class="fas fa-expand-arrows-alt">
-                <div class="flagPage">
-                  <img src="${content.flag}" alt="${content.name}" class="Characters-img">
-                </div>
               </i> 
+            </a>
           </div>
         </div>
       </article>
       <article class="Characters-info">
-        <h2>Name: <span>${content.name}</span></h2>
+        <h2>Name:<span>${content.name}</span></h2>
         <h3>Population: <span>${content.population}</span></h3>
         <h3>Region: <span>${content.region}</span></h3>
         <h3>Capital: <span>${content.capital}</span></h3>
         <h3>Region: <span>${content.region}</span></h3>
         <h3>Demonym: <span>${content.demonym}</span></h3>
         <h3>Native Name: <span>${content.nativeName}</span></h3>
+        <a href="https://es.wikipedia.org/wiki/${content.name}" target="_blank">Reed More</a>
       </article>
+      <div class="flagPage" id="/#/${content.name}/#flagPage">
+        <img src="${content.flag}" alt="${content.name}" class="Characters-img">
+    </div>
     </div>
   `
   return view;

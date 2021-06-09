@@ -8,7 +8,6 @@ $clr-bone: #fafafa;
 $clr-darkHeader: #2B3743;
 $clr-darkBody: #202D36;
 
-
 .colorVar{
   $clr-white: red;
 }
@@ -30,6 +29,9 @@ header {
   padding: 15px 5vw;
   @extend .font;
   box-shadow: $box2;
+  animation-name: fadeInDownBig;
+  animation-duration: .8s;
+  animation-fill-mode: both;
   h1 {
     font-size: $sinze8;
     color: $clr-black;
@@ -59,21 +61,30 @@ header {
   justify-content: space-between;
   align-items: center;
   div {
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
     display: flex;
     margin: 15px;
     padding: 0px 10px;
     border-radius: 5px;
     background: $clr-white;
     width: 80%;
-    max-width: 500px;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 650px;
     div{
       box-shadow: $box2;
+      display: grid;
+      grid-template-columns: 50px 1fr;
+      max-width: 500px;
       svg {
         filter: invert(1);
       }
       input {
         width: 100%;
+
         background: none;
         border: none;
         font-size: $sinze8;
@@ -99,7 +110,6 @@ header {
       color: $clr-white;
     }
   }
-
   select {
     cursor: pointer;
     height: 50px;
@@ -115,5 +125,29 @@ header {
     option {
       color: $clr-black;
     }
+  }
+  select:hover {
+    background-color: #dedee0;
+  }
+}
+
+@keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -2000px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

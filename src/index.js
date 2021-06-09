@@ -32,3 +32,5 @@ const mainRegion = document.querySelector("#mainRegion")
 mainRegion.addEventListener("change", ()=>{
   router(mainRegion.value);
 })
+//flagPage
+const buttonFlag= document.querySelector("#buttonFlag")
