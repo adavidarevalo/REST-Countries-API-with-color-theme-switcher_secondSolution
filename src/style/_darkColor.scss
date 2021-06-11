@@ -1,4 +1,6 @@
+
 .darkColor {
+  background:$clr-darkBody;
   header {
     background: $clr-darkHeader;
 
@@ -70,7 +72,7 @@
       }
       .Characters-inner{
         .Characters-info{
-          h2, h3{
+          h2, h3, a{
             color: $clr-white;
           }
         }

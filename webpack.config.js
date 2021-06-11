@@ -18,6 +18,20 @@ module.exports = {
         use: {
           loader: 'babel-loader',
         }
+      },
+      {
+        test: /\.(woff|woff2)$/i,
+        use:{
+          loader: "url-loader",
+          options:{
+            limit:10000,
+            minetype: "aplication/font-woff",
+            name: "[name].[ext]",
+            outputPath: "./assets/fonts",
+            publicPath: "./assets/fonts",
+            esModule: false
+          }
+        }
       }
     ]
   },

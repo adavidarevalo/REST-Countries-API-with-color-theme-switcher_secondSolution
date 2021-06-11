@@ -5,3 +5,24 @@
 @import "./style/error404";
 
 
+@media (max-width:897px){
+  body{
+    overflow-y: hidden;
+    .main{
+      .main-find{
+        justify-content: center
+        ;
+      }
+      section{
+        .Characters-inner{
+          .Characters-card{
+            .Characters-open{
+                  display: flex;
+                  justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}

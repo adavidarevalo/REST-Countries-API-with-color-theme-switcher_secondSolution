@@ -5,20 +5,21 @@ const Character = async(name)=>{
   const character= await getData(name)
   let content = character[0]
   const view = `
+    <button><a href="/dist/">Return</a></button>
     <div class="Characters-inner">
       <article class="Characters-card">
         <div class="Characters-open">
           <img src="${content.flag}" alt="${content.name}" class="Characters-img">
           <div class="Character-explain">
-            <a href="/#/${content.name}/#flagPage">
+
               <i class="fas fa-expand-arrows-alt">
               </i> 
-            </a>
+ 
           </div>
         </div>
       </article>
       <article class="Characters-info">
-        <h2>Name:<span>${content.name}</span></h2>
+        <h2>Name:<span> ${content.name}</span></h2>
         <h3>Population: <span>${content.population}</span></h3>
         <h3>Region: <span>${content.region}</span></h3>
         <h3>Capital: <span>${content.capital}</span></h3>
@@ -27,7 +28,8 @@ const Character = async(name)=>{
         <h3>Native Name: <span>${content.nativeName}</span></h3>
         <a href="https://es.wikipedia.org/wiki/${content.name}" target="_blank">Reed More</a>
       </article>
-      <div class="flagPage" id="/#/${content.name}/#flagPage">
+      <div class="flagPage">
+        <i class="fas fa-times-circle"></i>
         <img src="${content.flag}" alt="${content.name}" class="Characters-img">
     </div>
     </div>

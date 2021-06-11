@@ -33,4 +33,18 @@ mainRegion.addEventListener("change", ()=>{
   router(mainRegion.value);
 })
 //flagPage
-const buttonFlag= document.querySelector("#buttonFlag")
+window.addEventListener("click", e=>{
+  downFlag(e)
+})
+const downFlag = e =>{
+  if(e.target.classList.contains("fa-expand-arrows-alt")){
+    const flagPage = document.querySelector(".flagPage")
+    body.style="overflow:hidden;"
+    flagPage.classList.add("downFlag")
+  } else if(e.target.classList.contains("fa-times-circle")){
+    const flagPage = document.querySelector(".flagPage")
+    flagPage.classList.remove("downFlag")
+    body.style="overflow:visible;"
+  }
+}
+
