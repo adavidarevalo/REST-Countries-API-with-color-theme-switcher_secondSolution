@@ -14,7 +14,7 @@ const Home =async(name)=>{
         <h3>Capital: <span>${character.capital}</span></h3>
       </a>
     </article>
-    `)}
+    `).join("")}
   </div>
   `
   return view;
