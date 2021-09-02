@@ -1,7 +1,8 @@
 import getData from '../utils/getData'
 import getHash from '../utils/getHash';
-
 import { makeStyles } from '@material-ui/core/styles';
+
+
 
 const Character = async(name)=>{
   function getModalStyle() {
@@ -30,12 +31,11 @@ const Character = async(name)=>{
   const character= await getData(name)
   let content = character[0]
   const view = `
-    <button><a href="/dist/">Return</a></button>
+    <button class='buttonReturn'><a href="/">Return</a></button>
     <div class="Characters-inner">
       <article class="Characters-card">
         <div class="Characters-open">
           <img src="${content.flag}" alt="${content.name}" class="Characters-img">
-
         </div>
       </article>
       <article class="Characters-info">
