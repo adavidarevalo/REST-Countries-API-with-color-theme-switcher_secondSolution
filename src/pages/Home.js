@@ -6,9 +6,9 @@ const Home =async(name)=>{
   <div class="Characters">
     ${characters.map(character=>`
       <article class="Character-item">
-      <a href="#/${character.name}">
-        <img src="${character.flag}" alt="${character.name}">
-        <h2>Name: <span>${character.name}</span></h2>
+      <a href="#/${character.name.common}">
+        <img src="${character.flags.png}" alt="${character.name}">
+        <h2>Name: <span>${character.name.common}</span></h2>
         <h3>Population: <span>${character.population}</span></h3>
         <h3>Region: <span>${character.region}</span></h3>
         <h3>Capital: <span>${character.capital}</span></h3>

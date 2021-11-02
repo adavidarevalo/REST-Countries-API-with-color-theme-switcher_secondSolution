@@ -1,6 +1,6 @@
-const API = "https://restcountries.eu/rest/v2/all"
-const APIRegion = "https://restcountries.eu/rest/v2/region/"
-const APIName = "https://restcountries.eu/rest/v2/name/"
+const API = "https://restcountries.com/v3.1/all"
+const APIRegion = "https://restcountries.com/v3.1/region/"
+const APIName = "https://restcountries.com/v3.1/name/"
 
 import getHash from './getHash';
 
@@ -17,6 +17,7 @@ const getData = async (name) => {
   try {
     const response = await fetch(apiURl);
     const data = await response.json();
+    console.log('data ', data)
     return data;
   } catch (error) {
     console.log('Fetch Error', error);

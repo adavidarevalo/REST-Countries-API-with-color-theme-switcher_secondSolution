@@ -35,11 +35,11 @@ const Character = async(name)=>{
     <div class="Characters-inner">
       <article class="Characters-card">
         <div class="Characters-open">
-          <img src="${content.flag}" alt="${content.name}" class="Characters-img">
+          <img src="${content.flags.png}" alt="${content.name}" class="Characters-img">
         </div>
       </article>
       <article class="Characters-info">
-        <h2>Name:<span> ${content.name}</span></h2>
+        <h2>Name:<span> ${content.name.common}</span></h2>
         <h3>Population: <span>${content.population}</span></h3>
         <h3>Region: <span>${content.region}</span></h3>
         <h3>Capital: <span>${content.capital}</span></h3>
